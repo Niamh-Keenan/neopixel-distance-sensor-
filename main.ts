@@ -10,7 +10,7 @@ basic.forever(function () {
     PingUnit.Centimeters
     )
     basic.showNumber(distance_to_object)
-    if (distance_to_object < 4) {
+    if (distance_to_object > 4) {
         strip.setPixelColor(0, neopixel.colors(NeoPixelColors.Green))
         strip.setPixelColor(1, neopixel.colors(NeoPixelColors.Green))
         strip.setPixelColor(2, neopixel.colors(NeoPixelColors.Green))
