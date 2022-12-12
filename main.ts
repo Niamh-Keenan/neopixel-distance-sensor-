@@ -3,7 +3,7 @@ let strip: neopixel.Strip = null
 basic.showIcon(IconNames.Yes)
 basic.pause(500)
 basic.forever(function () {
-    strip = neopixel.create(DigitalPin.P16, 4, NeoPixelMode.RGB)
+    strip = neopixel.create(DigitalPin.P16, 3, NeoPixelMode.RGB)
     distance_to_object = sonar.ping(
     DigitalPin.P1,
     DigitalPin.P2,
@@ -37,14 +37,6 @@ basic.forever(function () {
         strip.setPixelColor(1, neopixel.colors(NeoPixelColors.Blue))
         strip.setPixelColor(2, neopixel.colors(NeoPixelColors.Blue))
         strip.setPixelColor(3, neopixel.colors(NeoPixelColors.Blue))
-        strip.show()
-        strip.clear()
-    } else if (distance_to_object == 4) {
-        strip.setPixelColor(0, neopixel.colors(NeoPixelColors.Blue))
-        strip.setPixelColor(1, neopixel.colors(NeoPixelColors.Blue))
-        strip.setPixelColor(2, neopixel.colors(NeoPixelColors.Blue))
-        strip.setPixelColor(3, neopixel.colors(NeoPixelColors.Blue))
-        strip.setPixelColor(4, neopixel.colors(NeoPixelColors.Blue))
         strip.show()
         strip.clear()
     } else if (distance_to_object < 1) {
